@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        /*reset*/
+        *{
+            margin: 0 ;
+            padding: 0 ;
+            color: #555;
+            outline: none;
+        }
+
+        ul{
+            list-style: none;
+            text-align: center;
+        }
+        a:hover{
+            color: #269abc;
+        }
+        .container{
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /*style*/
+        .head-top-navList li{
+            display: inline-block;
+            width: 15%;
+            height: 70px;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+            /*padding: 0 10px;*/
+            margin: 0 15px 0 0;
+            background-color: #ddd;
+            opacity: 0.3;
+            text-align: center;
+            line-height: 70px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 5px 5px 3px #888;
+        }
+
+        .head-top-navList .head-top-navSelect,.head-top-navList li:hover{
+            background-color: #fff;
+            opacity: 1;
+        }
+        .body{
+            background-color: #e8e8e8;
+        }
+
+
+    </style>
+</head>
+<body class="body">
+<ul class="body-background">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<header class="head-top">
+    <nav class="visible-xs dropdown">
+        <span data-toggle="dropdown" class="top-nav-listIcon">
+            <img src="images/top-list.icns" alt=""/>
+        </span>
+        <!--<ul class="dropdown-menu">-->
+            <!--<li>主页</li>-->
+            <!--<li>爱好</li>-->
+            <!--<li>项目</li>-->
+            <!--<li>博客</li>-->
+            <!--<li>关于</li>-->
+        <!--</ul>-->
+    </nav>
+    <nav class="head-top-nav col-sm-8 col-xs-12 col-sm-push-2 hidden-xs" >
+        <ul class="head-top-navList col-xs-12">
+            <li class="head-top-navSelect">主页</li>
+            <li>爱好</li>
+            <li>项目</li>
+            <li>博客</li>
+            <li>关于</li>
+    </ul>
+    </nav>
+</header>
+<div class="content">
+    <div class="content-main col-sm-8 col-xs-12 col-sm-push-2">
+        <div class="content-main-myInfo">
+            <div class="myInfo-icon"></div>
+            <div class="myInfo-Sidebar"></div>
+        </div>
+
+        <div class="content-main-img"><img src="images/01.jpg" alt=""/></div>
+        <div class="content-main-show">
+        </div>
+
+    </div>
+</div>
+<p></p>
+
+
+<script>
+    $('img').addClass("img-responsive center-block");
+    var navIndex = 0;
+    $('.head-top-navList li').click(function(){
+        navIndex = $(this).index();
+        $('.head-top-navList li').eq($(this).index()).addClass('head-top-navSelect').siblings('li').removeClass('head-top-navSelect');
+        console.log(navIndex);
+    });
+
+</script>
+</body>
+</html>

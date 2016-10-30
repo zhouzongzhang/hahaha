@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            text-decoration: none;
+        }
+        .slider-list{
+            text-decoration: none;
+            width: 2499px;
+            height: 500px;
+            position: relative;
+            /*z-index: 10;*/
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            list-style: none;
+        }
+        .slider{
+            margin: auto;
+            width: 833px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .prev{
+            width: 40px;
+            height: 60px;
+            position: absolute;
+            top: 220px;
+            /*z-index: 99;*/
+            cursor: pointer;
+        }
+        .next{
+            width: 40px;
+            height: 60px;
+            position: absolute;
+            top: 220px;
+            left: 793px;
+            /*z-index: 99;*/
+            cursor: pointer;
+        }
+        .indexList{
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+            /*z-index: 1000;*/
+        }
+        .indexList li{
+            float: left;
+            margin-right: 5px;
+            padding: 2px 4px;
+            border: 2px solid black;
+            background: grey;
+            cursor: pointer;
+        }
+        .indexList .indexOn{
+            background: red;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="slider">
+
+
+    <ul class="slider-list">
+        <li><img src="images/1.jpg" alt=""/></li>
+        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/3.jpg" alt=""/></li>
+    </ul>
+<div class="changeSidebar" style="display: none">
+    <img src="images/prev.png" alt="" class="prev"/>
+    <img src="images/next.png" alt="" class="next"/>
+</div>
+
+
+    <ul class="indexList"><!-- 图片右下角序号部分 -->
+        <li class="indexOn">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+</div>
+
+<script>
+
+    function all(){
+        slider();
+    }
+    all();
+    //轮播图特效
+    function slider(){
+        var index = 0, imgLen = $('.slider-list li').length; /* 当前index 和图片数量 */
+        // 自动切换图片定时器
+        var auto = setInterval(function(){
+            if(index < imgLen - 1){
+                index++;
+            }else{
+                index = 0;
+            }
+            changeto(index); // 调用图片切换函数
+//            console.log(index);
+        },2500);
+
+        //重置自动切换定时器函数
+        function replayauto(){
+            auto = setInterval(function(){
+                if(index < imgLen - 1){
+                    index++;
+                }else{
+                    index = 0;
+                }
+                changeto(index);
+//                console.log(index);
+            },2500);
+        }
+
+        // 图片切换函数
+        function changeto(num){
+            var goLeft = num * 833;
+            $('.slider-list').animate({
+                left: '-' + goLeft + 'px'
+            },500);
+            //右下角跟随图片切换
+            $('.indexList li').eq(num).addClass("indexOn").siblings("li").removeClass("indexOn");
+        }
+        //鼠标移入轮播图内停止定时器并显示两边切换控件,移出开启重置定时器并隐藏两边控件
+        $('.slider').hover(function(){
+            clearInterval(auto);
+            $('.changeSidebar').show();
+        },function(){
+            $('.changeSidebar').hide();
+            replayauto();  //调用重置自动切换函数
+        });
+
+
+        //左右切换图片
+        $('.prev').click(function(){
+            index = (index > 0) ? (--index) : (imgLen - 1);
+            changeto(index);
+            console.log(index);
+        });
+        $(".next").click(function(){
+            index = (index < imgLen - 1) ? (++index) : 0;
+            changeto(index);
+        });
+
+        //右下角点击切换图片
+        $('.indexList li').click(function(){
+            var $this = $(this);
+            changeto($this.index());
+        });
+    }
+
+
+</script>
+</body>
+</html>

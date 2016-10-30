@@ -1,0 +1,221 @@
+#container{
+    overflow-x: hidden;
+}
+
+#asideMenu{
+    width: 36px;
+    height: 100%;
+    position: fixed;
+    background: #1c1c1c;
+    right: 0;
+}
+.aside,.asideA{
+    width: 36px;
+    height: 41px;
+    position: relative;
+    left: 0;
+    top: 62px;
+    background: rgba(0,0,0,0) url("../images/sprite.png") no-repeat;
+    cursor: pointer;
+    z-index: 998;
+}
+#accountNumber{
+    background-position:  -40px 0;
+}
+#accountNumber:hover{
+    background-position: -120px 0;
+}
+#voucher{
+    margin-top: 18px;
+    background-position: -40px -44px;
+}
+#voucher:hover{
+    background-position: -120px -44px;
+}
+#brand{
+    margin-top: 22px;
+    background-position: -81px -44px;
+}
+#brand:hover{
+    background-position: -81px 0;
+}
+#commodity{
+    margin-top: 22px;
+    background-position: -161px 0;
+}
+#commodity:hover{
+    background-position: -161px -44px;
+}
+#shoppingBag{
+    height: 124px;
+    margin-top: 22px;
+    background: rgba(0,0,0,0);
+    border-top: 1px solid #7A7A7A;
+    border-bottom: 1px solid #7A7A7A;
+    /*url("images/sprite.png") no-repeat 0 -126px, url("images/sprite.png") no-repeat -121px -89px;*/
+}
+#shoppingBag:hover{
+    background: url("../images/sprite.png") no-repeat 0 0;
+}
+#shoppingBag #shobag{
+    width: 36px;
+    height: 45px;
+    background:url("../images/sprite.png") no-repeat 0 -126px;
+}
+#shoppingBag #shobag:hover{
+    background: url("../images/sprite.png") no-repeat -120px -85px;
+}
+#shoppingBag #shoText{
+    width: 20px;
+    height: 30px;
+    padding: 0 0 0 10px;
+    margin-top: -5px;
+    font-family: "Microsoft YaHei";
+    color: #C0C0C0;
+    font-size: 14px;
+}
+#shoppingBag #shoCount{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 9px;
+    top: 100px;
+    border: 5px solid #E20280;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+#shoppingBag #shoCount:hover{
+    border: 5px solid #ffffff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #E20280;
+}
+
+#asideMenu #reaction{
+    width: 36px;
+    height: 37px;
+    margin-top: 60px;
+    background: url("../images/sprite.png") no-repeat -80px -87px;
+}
+#asideMenu #reaction:hover{
+    background: url("../images/sprite.png") no-repeat -40px -87px;
+}
+#asideMenu #toTop{
+    width: 36px;
+    height: 43px;
+    margin-top: 40px;
+    background: url("../images/sprite.png") no-repeat -40px -126px;
+}
+#asideMenu #toTop:hover{
+    background: url("../images/sprite.png") no-repeat -160px -85px;
+}
+
+#hidezero{
+    width: 274px;
+    height: 304px;
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid red;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: none;
+}
+#zeroimg a{
+    text-decoration: none;
+}
+#zeroimgf a{
+    color: red;
+}
+.zerowide{
+    width:136px;
+    height:104px;
+}
+.zeronarrow{
+    width:1px;
+    height:80px;
+    margin-top:14px;
+}
+#zeroVIP{
+    position: absolute;
+    left: 67%;
+    top: 276px;
+    color: deepskyblue;
+    font-size: 12px;
+}
+
+#zeroimg{
+    margin-top: 27px;
+}
+#zeroimgf{
+    padding:0 0 20px 70px;
+    font-size: 14px;
+
+}
+#closezero{
+    position: absolute;
+    float: left;
+    left: 243px;
+    top: 2px;
+    cursor: pointer;
+}
+#zeroUl p{
+    font-size: 13px;
+    position: relative;
+    left: 40px;
+    top: 49px;
+    cursor: pointer;
+}
+#zeroUl p:hover{
+    color: #E20280;
+}
+#zeroUl li{
+    list-style: outside none;
+    float: left;
+    background-color: #DEDEDE;
+}
+#zeroone{
+    width: 20px;
+    height: 27px;
+    position: absolute;
+    left: 58px;
+    top: 164px;
+    background: url("../images/sprite.png") no-repeat -152px -130px;
+}
+#zeroone:hover{
+    background: url("../images/sprite.png") no-repeat -122px -130px;
+    cursor: pointer;
+}
+#zerotwo{
+    width:26px;
+    height:19px;
+    position: absolute;
+    left: 192px;
+    top: 169px;
+    background: url("../images/sprite.png") no-repeat -31px -174px;
+}
+#zerotwo:hover{
+    background: url("../images/sprite.png") no-repeat 0 -173px;
+    cursor: pointer;
+}
+
+#hidOne,#hidTwo,#hidThree,#hidFour,#hidFive {
+    width: 118px;
+    height: 40px;
+    position: fixed;
+    left: -500px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 15px;
+    line-height: 36px;
+    color: #7A7A7A;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    border-radius: 5px;
+    background: #F4F4F4;
+    z-index: 998;
+}

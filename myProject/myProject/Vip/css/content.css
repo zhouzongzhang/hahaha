@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.content{
+    position: relative;
+}
+.inner_nc{
+    width: 1000px;
+    margin:0 auto;
+}
+.title{
+    width: 78px;
+    height: 460px;
+    position: absolute;
+    left: 70px;
+    top: 80px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.title ul{
+    list-style: none;
+    width: 62px;
+    padding: 0 7px;
+}
+.title ul li{
+    width: 62px;
+    height: 37px;
+    color: #666;
+    border-bottom: 1px solid #cccccc;
+}
+
+.title ul li a{
+    display: block;
+    width: 62px;
+    height: 38px;
+    text-align:center;
+    line-height: 37px;
+    color: inherit;
+    cursor: pointer;
+}
+.color{
+    background-color: #f10180;
+    color: white;
+    border-radius:5px;
+}
+.firstBox{
+    height: 970px;
+    padding-top: 30px;
+}
+.firstBox .left .ls_fir_imgBox{
+    position: relative;
+    width: 490px;
+    height: 270px;
+    margin-top: 20px;
+    float: left;
+}
+.firstBox .left .fir_imgBox{
+    width: 450px;
+    height: 236px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: white;
+    display: none;
+}
+.firstBox .left .fir_imgBox .fir_other{
+    position: absolute;
+    left: 0px;
+    top: 184px;
+    width: 390px;
+    padding: 0 30px;
+    height: 50px;
+    border-top:1px dashed black;
+}
+.firstBox .left .fir_imgBox .fir_other div{
+    width: 120px;
+    text-align: center;
+}
+.firstBox .left .fir_imgBox .fir_other div span{
+    display: block;
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+    line-height: 20px;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 15px;
+    color: #666;
+    border: 1px solid #666;
+}
+.firstBox .left .fir_imgBox .fir_other div input{
+    width: 120px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+.firstBox .left .fir_imgBox .fir_other div span b{
+    display: block;
+    width: 16px;
+    height: 13px;
+    line-height: 20px;
+    background:url("../images/sprite.png") no-repeat -60px -170px;
+    margin-left: 10px;
+    margin-top: 4px;
+    float: left;
+}
+.firstBox .left .fir_imgBox ul{
+    list-style: none;
+}
+.firstBox .left .fir_imgBox ul li{
+    padding-top: 10px;
+    height: 180px;
+    padding-left: 15px;
+    float: left;
+}
+.firstBox .left .fir_imgBox ul li a{
+    display: block;
+    width: 120px;
+    height: 152px;
+}
+.firstBox .left .fir_imgBox ul li a span{
+    display: block;
+    width: 120px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #000;
+}
+.firstBox .left .fir_imgBox ul li a img{
+    width: 120px;
+    height: 152px;
+}
+.Box{
+    margin-top: 50px;
+    padding-top: 50px;
+    height:1000px;
+}
+.header{
+    height: 42px;
+    border-bottom:1px solid black;
+}
+.header span{
+    font-size: 14px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.header span a{
+    text-decoration: none;
+    color: #666;
+}
+.leftSide{
+    width: 490px;
+    margin-right: 10px;
+    margin-top: 20px;
+    float: left;
+}
+.leftSide ul{
+    list-style: none;
+}
+.leftSide ul li{
+    width: 490px;
+    position: relative;
+}
+.leftSide ul li a{
+    display: block;
+    width: 490px;
+    height: 280px;
+    margin-bottom: 20px;
+}
+.leftSide ul li span{
+    display: none;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+    background-color: white;
+    border-radius:10px;
+    cursor: pointer;
+}
+.leftSide ul li span b{
+    display: block;
+    width: 16px;
+    height: 13px;
+    line-height: 20px;
+    background:url("../images/sprite.png") no-repeat -60px -170px;
+    margin-left: 10px;
+    margin-top: 4px;
+    float: left;
+}
+.leftSide ul li span p{
+    float: left;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.leftSide img{
+    width: 490px;
+    height: 280px;
+}
+.rightSide{
+    width: 490px;
+    margin-top: 20px;
+    float: right;
+}
+.rightSide ul{
+     list-style: none;
+ }
+.rightSide ul li{
+    width: 490px;
+    position: relative;
+}
+.rightSide ul li a{
+    display: block;
+    width: 490px;
+    height: 280px;
+    margin-bottom: 20px;
+}
+.rightSide ul li span{
+    display: none;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+    background-color: white;
+    border-radius:10px;
+    cursor: pointer;
+}
+.rightSide ul li span b{
+    display: block;
+    width: 16px;
+    height: 13px;
+    line-height: 20px;
+    background:url("../images/sprite.png") no-repeat -60px -170px;
+    margin-left: 10px;
+    margin-top: 4px;
+    float: left;
+}
+.rightSide ul li span p{
+    float: left;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.rightSide img{
+    width: 490px;
+    height: 280px;
+}
+.box_footer{
+    height: 50px;
+    border-top: 1px solid #666666;
+    margin-top: 20px;
+}
+.box_footer button{
+    margin: 0 auto;
+    margin-left: 350px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    background-color: #f10180;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+
+.yugao{
+    margin-top: 50px;
+}
+.yugao .yugao_Box{
+    margin-top: 20px;
+    height: 650px;
+}
+.yugao .yugao_Box ul{
+    list-style: none;
+}
+.yugao .yugao_Box ul li{
+    float: left;
+    margin-right: 20px;
+    width: 320px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+.yugao .yugao_Box ul li .desc{
+
+}
+.yugao .yugao_Box ul li .desc p{
+    font-size: 12px;
+}
+.yugao .yugao_Box ul li a{
+    display: block;
+    width: 320px;
+    height: 150px;
+}
+.yugao .yugao_Box ul li span{
+    display: none;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right:5px;
+    top: 130px;
+    background-color: white;
+    border-radius:10px;
+    cursor: pointer;
+}
+.yugao .yugao_Box ul li span b{
+    display: block;
+    width: 16px;
+    height: 13px;
+    line-height: 20px;
+    background:url("../images/sprite.png") no-repeat -60px -170px;
+    margin-left: 10px;
+    margin-top: 4px;
+    float: left;
+}
+.yugao .yugao_Box ul li span p{
+    float: left;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.yugao .yugao_Box ul li p{
+    font-size: 12px;
+    margin-top: 10px;
+    color:#333;
+}
+.yugao .yugao_Box ul li .hid{
+    width: 320px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 174px;
+    display: none;
+}
+.yugao .yugao_Box ul li .hid .input{
+    width: 200px;
+    height: 22px;
+    border:1px solid #ccc;
+    margin-top: 10px;
+}
+.yugao .yugao_Box ul li .hid .input input{
+    width: 140px;
+    height: 12px;
+    border:none;
+    border-right: 1px solid #cccccc;
+    margin: 2px;
+    margin-left: 5px;
+    outline: none;
+    cursor: text;
+}
+.yugao .yugao_Box ul li .hid .input button{
+    width: 50px;
+    height: 22px;
+    background-color: white;
+    color: lightseagreen;
+    border: none;
+    cursor: pointer;
+}
+.yugao_footer{
+    height: 50px;
+    border-top: 1px solid #666666;
+    margin-top: 20px;
+}
+.yugao_footer button{
+    margin: 0 auto;
+    margin-left: 350px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    background-color: #f10180;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius:10px;
+    cursor: pointer;
+}
+

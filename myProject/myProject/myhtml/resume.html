@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Resume</title>
+    <link rel="shortcut icon" href="images/htmlLogo.ico">
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        body{
+            background-color: rgba(0,0,0,0.5);
+        }
+        *{
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            outline: none;
+            font:14px/180% "Microsoft yahei", "微软雅黑" ,Tahoma, Arial, Helvetica, sans-serif, "新宋体";
+        }
+        .myInfo-main{
+            width: 900px;
+            height: 1300px;
+            padding: 30px;
+            background-color: #fff;
+        }
+        .myInfo-head{
+            height: 180px;
+        }
+
+        .name{
+            width: 250px;
+            height: 150px;
+            float: left;
+        }
+        .name h1{
+            font-size: 35px;
+            margin: -10px 0 0 30px;
+        }
+        .name p{
+            font-size: 14px;
+            margin: 5px 0 0 30px;
+        }
+        .otherInfo{
+            float: left;
+            width: 650px;
+            height: 150px;
+        }
+        .me{
+            display: block;
+            font-size: 24px;
+            margin: 5px 0 0 65px;
+        }
+        .me span{
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 0 15px;
+        }
+
+        .left-info{
+            width: 200px;
+            float: left;
+            margin:0 10px 0 100px;
+        }
+        .left-info li{
+            display: block;
+        }
+        .left-info li span{
+            padding: 0 0 0 10px;
+        }
+
+        .left-info li:nth-child(2),.left-info li:nth-child(5){
+            margin-left: 3px;
+        }
+        .left-info li:nth-child(4){
+            margin-left: 1px;
+        }
+
+        .left-info li:nth-child(3) span{
+            padding: 0 0 0 5px;
+        }
+        .left-info li:nth-child(4) span{
+            padding: 0 0 0 9px;
+        }
+
+
+
+        .right-info{
+            width: 200px;
+            height: 150px;
+            float: left;
+            margin: 0 0 0 100px;
+        }
+        .right-info li{
+            display: block;
+        }
+        .right-info li span{
+            padding: 0 0 0 10px;
+        }
+
+
+        .myInfo-body{
+            height: 1050px;
+        }
+
+        .skill{
+            width: 900px;
+            height: 200px;
+        }
+
+        .skill-logo{
+            width: 100%;
+            font-size: 30px;
+            margin: 5px 0 0 30px;
+        }
+        .skill-logo span{
+            font-size: 20px;
+            margin: 0 0 0 10px;
+            font-weight: bold;
+        }
+
+        .skill-main p{
+            text-indent: 2em;
+            display: block;
+            margin: 0 0 0 40px;
+        }
+        .skill-main p span{
+            padding: 0 0 0 5px;
+        }
+
+        .item{
+            width: 900px;
+            height: 500px;
+            margin-top: 40px;
+        }
+
+        .item-logo{
+            width: 100%;
+            font-size: 30px;
+            margin: 5px 0 0 30px;
+        }
+        .item-logo span{
+            font-size: 20px;
+            margin: 0 0 0 10px;
+            font-weight: bold;
+        }
+
+        .item-main h1{
+            margin: 0 0 0 40px;
+            font-size: 20px;
+        }
+        .item-main h2{
+            margin: 12px 0 0 40px;
+            font-size: 20px;
+        }
+
+        .item-main h1 span,.item-main h2 span{
+            font-size: 16px;
+            padding: 0 0 0 10px;
+            margin-bottom: 10px;
+            line-height: 25px;
+            font-weight: bold;
+        }
+        .item-main p{
+            text-indent: 2em;
+            margin: 0 0 0 40px;
+        }
+
+
+
+
+
+        .myInfo-foot{
+            height: 90px;
+        }
+
+        .foot-logo{
+            width: 100%;
+            font-size: 30px;
+            margin: 5px 0 0 30px;
+        }
+        .foot-logo span{
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 0 0 10px;
+        }
+        .foot-main p{
+            text-indent: 2em;
+            margin: 0 0 0 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="myInfo-main">
+    <div class="myInfo-head">
+        <div class="name">
+            <h1>周宗涨</h1>
+            <p>2015年毕业生</p>
+            <p>求职意向：Web前端开发工程师</p>
+        </div>
+        <div class="otherInfo">
+            <div class="me fa fa-user"><span>个人信息</span></div>
+            <ul class="left-info">
+                <li class="fa fa-calendar-o"><span>出生年月：1993.09</span></li>
+                <li class="fa fa-male"><span>性别：男</span></li>
+                <li class="fa fa-graduation-cap"><span>学校：浙江工业大学之江学院</span></li>
+                <li class="fa fa-book"><span>学历：本科</span></li>
+                <li class="fa fa-map-marker"><span>现住地：杭州江干区</span></li>
+            </ul>
+            <ul class="right-info">
+                <li class="fa fa-phone"><span>18758880295</span></li>
+                <li class="fa fa-envelope"><span>896933890@qq.com</span></li>
+                <li class="fa fa-github-alt"><span>github.com/zhouzongzhang</span></li>
+                <li class="fa fa-internet-explorer"><span>www.zhouzongzhang.com</span></li>
+                <li class="fa fa-qq"><span>896933890</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="myInfo-body">
+        <div class="skill">
+            <div class="skill-logo fa fa-lightbulb-o"><span>专业技能</span></div>
+            <div class="skill-main">
+                <p class="fa fa-battery-4"><span>精通HTML5、CSS3、Javascript等web前端技术</span></p>
+                <p class="fa fa-battery-4"><span>懂得兼容多种浏览器,代码在浏览器中的调试功能,懂得优化页面的加载</span></p>
+                <p class="fa fa-battery-3"><span>熟悉jQuery，能够使用jQuery代替原生Javascript实现网页特效，提高效率。</span></p>
+                <p class="fa fa-battery-3"><span>熟悉 React.js 和 AngularJS、Bootstrap 等框架,知道如何实现响应式布局。</span></p>
+                <p class="fa fa-battery-3"><span>熟悉框架设计的方法，会自己封装 css 动画框架和 js 的一些框架。</span></p>
+                <p class="fa fa-battery-2"><span>了解 XML、HTTP 协议、Ajax、Json，能连接 API 接口，与服务器数据交互，实现网页的异步请求和更新</span></p>
+                <p class="fa fa-battery-1"><span>了解 Apache 服务器、MySQL 数据库，可以编写基本的 PHP 页面，对前端 MVC框架有一定认识。</span></p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-logo fa fa-briefcase"><span>项目经验</span></div>
+            <div class="item-main">
+                <h1 class="fa fa-caret-right"><span>个人网站</span> <i>(www.zhouzongzhang.com)</i></h1>
+                <p>介绍：这是完全独立的个人网站制作开发，包括首页、轮播图、个人信息介绍、相册功能等。网站仅作为个人学习与实践来使用，今后个人项目也会发布在这个网站上。</p>
+                <p>1、对网页整体模块的构思与设计，选取素材以及框架的选择。</p>
+                <p>2、根据设计图，完成HTML结构搭建，并利用CSS及CSS3.0对网页进行样式设计。</p>
+                <p>3、使用jQuery完成自己所需的动画效果，包括位移、缩放等，使网页整体内容更加丰富。</p>
+                <p>4、使用jQuery完成手风琴式轮播图，以及对首页导航设置定位移动滚动至相应内容所在网页位置。</p>
+                <p>5、使用CSS3.0以及jQuery完成相册部分，包括相册的放大、关闭、左右切换图片等功能。</p>
+                <p>6、完成所有页面交互设计，并建立我的项目栏，可将今后的个人项目发布至我的个人网站上。</p>
+                <p>7、博客功能尚未完成，将在学习更多的后端知识后完成博客功能的开发。</p>
+                <p>8、申请服务器、域名和备案，上载文件，并进行最后的上线调试。</p>
+                <h2 class="fa fa-caret-right"><span>HTML5移动端Web App阅读器</span></h2>
+                <p>介绍：使用zepto框架、HTML5的LocalStorage以及使用JSONP完成跨域请求数据完成项目。</p>
+                <p>1、根据设计图完成阅读器的页面结构和样式的开发，包括书籍阅读页面，底部唤出的操作面板和上下翻页键。</p>
+                <p>2、因为仅用于移动端，且逻辑并不复杂，如果使用其他框架，成本过高，所以使用轻量级框架zepto进行搭建，并且采用单页设计。</p>
+                <p>3、使用Javascript完成交互部分的开发，包括点击唤出隐藏操作面板、上下翻页、自定义主题的切换、夜间模式的切换、字体大小的设置等等。</p>
+                <p>4、使用HTML5的LocalStorage完成对字体、页数的保存、主题和每次载入的读取。</p>
+                <p>5、数据层的实现模拟了真实项目的数据通信流程，首先请求一个使用base64加密的地址指向具体数据的地址，使用JSONP插件完成跨域的请求并获取真实的数据，最后进行数据的渲染。</p>
+                <h2 class="fa fa-caret-right"><span>仿电商网站唯品会首页开发</span></h2>
+                <p>介绍：这是我的第一个项目，通过这个项目让我对Web前端开发有了更深层次的理解，为以后的项目开发奠定了基础。</p>
+                <p>1、由于是模仿唯品会首页，所以没有页面设计一步，所有素材均取自网站本身。</p>
+                <p>2、构思整体框架搭建，主要内容为头部导航部分、轮播图部分、左右两边导航条部分以及中间主体内容部分。</p>
+                <p>3、通过jQuery实现导航条的显示和隐藏动态效果，并在浏览下方网页内容时固定头部导航在最上方。</p>
+                <p>4、通过定时器制作轮播图自动换页效果，左边固定导航条根据滚动条位移的判断位移至相应部分。</p>
+                <p>5、使用Ajax异步通信，通过PHP服务器端对MySQL数据库进行简单的用户密码验证操作</p>
+                <p>6、由于第一个项目的经验不足，在对类名等的命名上并不规范，对一些技术的应用并不到位，但对我仍有相当重要的意义。</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="myInfo-foot">
+        <div class="foot-logo fa fa-edit"><span>自我评价</span></div>
+        <div class="foot-main">
+            <p>虽然对于前端这一行业本人属于半路出家，且学习时间相对较短，但我对前端技术有着很高的学习热情，乐于自学新知识，性格乐观开朗，肯吃苦耐劳，具有较好的团队协作能力。</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

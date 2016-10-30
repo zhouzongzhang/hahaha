@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<span id="0"><a href="javascript:;">删除</a></span>
+<span id="1"><a href="javascript:;">删除</a></span>
+<span id="2"><a href="javascript:;">删除</a></span>
+<script>
+    for(var i = 0; i < 3; i++) {
+        document.getElementById(i).onclick = (function (id) {
+            return function () {
+                alert(id);
+            }
+        })(i);
+    }
+</script>
+</body>
+</html>

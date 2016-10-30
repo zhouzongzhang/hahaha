@@ -1,0 +1,315 @@
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.head-topNav{
+    width: 1100px;
+    height: 60px;
+}
+
+.head-top-logo{
+    width: 200px;
+    height: 60px;
+    float: left;
+}
+.head-top-logo img{
+    margin: 10px 0 0 0;
+}
+
+.backhome{
+    line-height: 60px;
+    font-size: 30px;
+    color: #000000;
+    opacity: 0.7;
+    margin: 0 0 0 100px;
+}
+.backhome:hover{
+    color: #FFFFFF;
+}
+.content{
+    margin: 60px 0 0 0;
+}
+.myInfo-logo{
+    height: 120px;
+    font-size: 30px;
+    line-height: 120px;
+    position: relative;
+}
+
+.headPic{
+    width: 100px;
+    height: 100px;
+    background: url("../images/head.jpg")no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    margin: 10px;
+}
+.headPic-shadow{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #000000;
+    opacity: 0;
+}
+.headPic-shadow a{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+}
+.info-logo-show{
+    color: #000000;
+    opacity: 0.7;
+    margin: 0 0 0 535px;
+}
+.info-logo-show:hover{
+    color: #FFFFFF;
+    opacity: 1;
+}
+.myInfo-logo span{
+    display: block;
+    width: 0;
+    height: 30px;
+    color: #FFFFFF;
+    line-height: 30px;
+    position: absolute;
+    top: 45px;
+    left: 560px;
+    overflow: hidden;
+}
+.myInfo{
+    height: 1200px;
+    background-color: rgba(0,0,0,0.5);
+    margin: 20px 0;
+}
+.myInfo-main{
+    width: 740px;
+    height: 1150px;
+    margin: 0 0 0 150px;
+    padding: 30px;
+    background-color: #fff;
+}
+.myInfo-head{
+    height: 150px;
+    /*background-color: #ffff00;*/
+}
+
+.name{
+    width: 240px;
+    height: 150px;
+    /*background-color: #fff;*/
+    float: left;
+}
+.name h1{
+    font-size: 35px;
+    margin: -10px 0 0 30px;
+}
+.name p{
+    font-size: 14px;
+    margin: 5px 0 0 30px;
+}
+.otherInfo{
+    float: left;
+    width: 500px;
+    height: 150px;
+    /*background-color: #cccccc;*/
+}
+.me{
+    display: block;
+    font-size: 24px;
+    /*background-color: #67b168;*/
+    margin: 5px 0 0 65px;
+}
+.me span{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 0 15px;
+}
+
+.left-info{
+    width: 200px;
+    float: left;
+    /*background-color: #c1e2b3;*/
+    margin-left: 100px;
+}
+.left-info li{
+    display: block;
+}
+.left-info li span{
+    padding: 0 0 0 10px;
+}
+
+.left-info li:nth-child(2),.left-info li:nth-child(5){
+    margin-left: 3px;
+}
+.left-info li:nth-child(4){
+    margin-left: 1px;
+}
+
+.left-info li:nth-child(3) span{
+    padding: 0 0 0 5px;
+}
+.left-info li:nth-child(4) span{
+    padding: 0 0 0 9px;
+}
+
+
+
+.right-info{
+    width: 150px;
+    height: 115px;
+    float: left;
+    margin: 0 0 0 40px;
+    /*background-color: #ffff00;*/
+}
+.right-info li{
+    display: block;
+}
+.right-info li span{
+    padding: 0 0 0 10px;
+}
+
+
+.myInfo-body{
+    height: 750px;
+    /*background-color: #1F95D1;*/
+}
+
+.skill{
+    width: 740px;
+    height: 200px;
+    /*background-color: #ffff00;*/
+}
+
+.skill-logo{
+    width: 100%;
+    font-size: 30px;
+    margin: 5px 0 0 30px;
+}
+.skill-logo span{
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    font-weight: bold;
+}
+
+.skill-main p{
+    margin: 0 0 0 40px;
+}
+.skill-main p span{
+    padding: 0 0 0 5px;
+}
+
+.item{
+    width: 740px;
+    height: 500px;
+    /*background-color: #1F95D1;*/
+}
+
+.item-logo{
+    width: 100%;
+    font-size: 30px;
+    margin: 5px 0 0 30px;
+}
+.item-logo span{
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    font-weight: bold;
+}
+
+.item-main h1{
+    margin: 0 0 0 40px;
+    font-size: 20px;
+}
+.item-main h2{
+    margin: 12px 0 0 40px;
+    font-size: 20px;
+}
+
+.item-main h1 span,.item-main h2 span{
+    font-size: 16px;
+    padding: 0 0 0 10px;
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-weight: bold;
+}
+.item-main p{
+    text-indent: 2em;
+    margin: 0 0 0 40px;
+}
+
+
+
+
+
+.myInfo-foot{
+    height: 90px;
+    /*background-color: #67b168;*/
+}
+
+.foot-logo{
+    width: 100%;
+    font-size: 30px;
+    margin: 5px 0 0 30px;
+}
+.foot-logo span{
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    font-weight: bold;
+}
+.foot-main p{
+    text-indent: 2em;
+    margin: 0 0 0 30px;
+}
+
+footer{
+    height: 50px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.contactMe{
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.contactMe p{
+    position: absolute;
+    top: 13px;
+    left: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+.contactMe li{
+    float: right;
+    line-height: 50px;
+    margin:0 50px 0 0;
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+    position: relative;
+}
+.contactMe li:nth-child(1){
+    margin:0 10px 0 0;
+}
+
+
+.contactMe li:hover{
+    color: #fff;
+}
+
+.contactMe-show{
+    width: 200px;
+    height: 0;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+}

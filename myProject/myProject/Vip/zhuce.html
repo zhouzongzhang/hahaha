@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<style type="text/css">
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: #FDFBFE;
+    }
+    .container{
+        width: 1002px;
+        height: 758px;
+        position: relative;
+        margin: 0 auto;
+        /*border: 1px solid red;*/
+    }
+    .header{
+        width: 100%;
+        height: 158px;
+        position: absolute;
+        /*border: 1px solid purple;*/
+    }
+    .logo1{
+        width: 311px;
+        height: 34px;
+        position: absolute;
+        left: 1px;
+        top: 59px;
+        background: url("images/RegisterSprite1.png") no-repeat 0 -393px;
+    }
+    .promise{
+        width: 445px;
+        height: 29px;
+        position: absolute;
+        left: 556px;
+        top: 65px;
+        background: url("images/RegisterSprite1.png") no-repeat 0 -452px;
+    }
+    .session{
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        left: 1px;
+        top: 157px;
+        /*border: 1px solid green;*/
+        background: url("images/bigOne.jpg") no-repeat;
+    }
+    .registerForm {
+        width: 368px;
+        height: 365px;
+        position: absolute;
+        left: 634px;
+        top: 68px;
+    }
+    .statement{
+        width: 100%;
+        height: 20px;
+    }
+    .statement p,.statement a{
+        float: left;
+        font-family: "微软雅黑";
+        color: #4D4D4D;
+    }
+
+    .moveA{
+        font-size: 14px;
+        margin-left: 2px;
+
+    }
+    .moveB{
+        font-size: 12px;
+        margin-left: 122px;
+        margin-top: 2px;
+    }
+
+    .registerForm a{
+        text-decoration: none;
+        font-size: 12px;
+        display: block;
+        height: 13px;
+        margin-top: 2px;
+    }
+    .statement a,#stateCheck{
+        color: #F10381;
+    }
+    .linkA{
+        position: absolute;
+        left: 182px;
+        top: 254px;
+        color: #1F95D1;
+    }
+    .form{
+        width: 100%;
+        height: 325px;
+    }
+    .formInput{
+        line-height: 18px;
+        /*border-color: #666;*/
+        width: 260px;
+        height: 28px;
+        margin-left: 2px;
+        margin-top: 32px;
+        padding-left: 10px;
+        font-size: 14px;
+        border: 1px solid darkgray;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    .formSubmit{
+        display: block;
+        width: 141px;
+        height: 40px;
+        margin-left: 2px;
+        margin-top: 25px;
+        border: 0;
+        background: url("images/RegisterSprite1.png") no-repeat 0 -118px;
+        cursor: pointer;
+    }
+    input {outline: none;}textarea {outline: none;}
+    label{
+        display: block;
+        font-size: 13px;
+        position: relative;
+        left: 22px;
+        top: 10px;
+        /*height: 40px;*/
+    }
+    #checkBox{
+        width: 18px;
+        height: 17px;
+        display: inline-block;
+        position: relative;
+        left: 2px;
+        top: 30px;
+        /*background: url("images/RegisterImg/RegisterSprite2.png") no-repeat 0 0;*/
+    }
+    #stateCheck{
+        display: inline-block;
+        position: relative;
+        left: -4px;
+        top: -1px;
+    }
+    #stateCheck:hover{
+        color: palevioletred;
+    }
+    input:focus{
+        background-color: #ffe6e7;
+        border-color: #fca1a5;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo1"></div>
+        <div class="promise"></div>
+    </div>
+    <div class="session">
+        <div class="registerForm">
+            <div class="statement"><p class="moveA">欢迎注册</p><p class="moveB">已注册可</p><a  class="moveC" href="denlu.html">直接登录</a></div>
+            <form id="form" class="form" action="data.php" method="post">
+                <input class="formInput one" type="text" name="username" id="uname"  placeholder="请输入手机号码"/><span id="span" style="display: none"></span>
+                <input class="formInput" type="password" name="password" id="pwd" placeholder="密码由6-20位字母、数字和符号组成"/>
+                <input class="formInput" type="password" name="repassword" placeholder="请再次输入上面的密码"/>
+                <input class="formSubmit" type="submit" value=""/>
+                <input id="checkBox" type="checkbox" value="" checked="checked"/>
+                <label for="checkBox">我已阅读并接受 <a id="stateCheck" href="#">唯品会服务条款</a>。</label>
+            </form>
+            <a class="linkA" href="#">通过邮箱注册 >></a>
+        </div>
+    </div>
+</div>
+<!--<form action="data.php" method='post'>-->
+     <!--用户名: <input type="text" name='username' id="uname"/><span id="span" style="display: none"></span>-->
+     <!--<br/><br/>-->
+     <!--密 码:  <input type="password" name="password" id="pwd"/>-->
+     <!--<br/><br/>-->
+     <!--确认密码:<input type="password" name="repassword" />-->
+     <!--<br/><br/>-->
+     <!--<input type="submit" value="注册" />-->
+<!--</form>-->
+<script type="text/javascript">
+    var uname = document.getElementById("uname");
+    var pwd = document.getElementById("pwd");
+    var span = document.getElementById('span');
+    uname.onblur = function (){
+        var xhr = null;
+        var data = uname.value;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open('GET','data.php?data='+ data,true);
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState == 4 && xhr.status == 200){
+                var datas= xhr.responseText;
+                span.innerHTML = '';
+                if(datas == ''){
+                    span.style.display = 'none';
+                }else{
+                    span.innerHTML = datas;
+                    span.style.display = 'block';
+                }
+            }
+        };
+        xhr.send(null);
+    }
+
+</script>
+</body>
+</html>

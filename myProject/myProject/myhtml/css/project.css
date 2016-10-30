@@ -1,0 +1,150 @@
+
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+}
+
+.head-topNav{
+    width: 1100px;
+    height: 60px;
+}
+
+.head-top-logo{
+    width: 200px;
+    height: 60px;
+    float: left;
+}
+.head-top-logo img{
+    margin: 10px 0 0 0;
+}
+
+.backhome{
+    line-height: 60px;
+    font-size: 30px;
+    color: #000000;
+    opacity: 0.7;
+    margin: 0 0 0 100px;
+}
+.backhome:hover{
+    color: #FFFFFF;
+}
+
+.project{
+    margin-top: 60px;
+    height: 1000px;
+    /*background-color: rgba(0,0,0,0.5);*/
+}
+.project-head{
+    height: 100px;
+    position: relative;
+    /*background-color: #269abc;*/
+}
+.project-logo a{
+    color: #000000;
+    opacity: 0.7;
+    font-size: 30px;
+    margin: 35px 0 0 535px;
+    cursor: pointer;
+
+}
+.project-logo a:hover{
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.project-logo span{
+    line-height: 30px;
+    text-align: center;
+    width: 0;
+    height: 30px;
+    display: block;
+    overflow: hidden;
+    color: #FFFFFF;
+    position: absolute;
+    top: 35px;
+    left: 580px;
+}
+
+
+.project-body{
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.project-foot{
+    height: 100px;
+    /*background-color: #fff;*/
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 50px;
+    background-color: rgba(0,0,0,0.8);
+    margin-top: 50px;
+}
+
+.contactMe{
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.contactMe p{
+    position: absolute;
+    top: 13px;
+    left: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+.contactMe li{
+    float: right;
+    line-height: 50px;
+    margin:0 50px 0 0;
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+    position: relative;
+}
+.contactMe li:nth-child(1){
+    margin:0 10px 0 0;
+}
+
+
+.contactMe li:hover{
+    color: #fff;
+}
+
+.contactMe-show{
+    width: 200px;
+    height: 0;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+}

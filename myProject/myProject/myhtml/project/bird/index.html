@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Birds</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="shortcut icon" href="../../images/htmlLogo1.ico">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+    header{
+        height: 50px;
+        background: linear-gradient(gray,orange);
+    }
+    @keyframes example {
+        from{font-size: 150%}
+        to{font-size: 200%}
+    }
+    header h3{
+        color: pink;
+        text-shadow: pink 2px 2px;
+        animation: example 1s 20000;
+    }
+        #login{
+            margin-top: 8px;
+        }
+        #singin{
+            margin-top: 8px;
+        }
+     nav{
+         height: 70px;
+         background: linear-gradient(yellow,cadetblue);
+     }
+     nav button{
+        margin-top: 15px;
+     }
+     section{
+         height: 800px;
+         /*background-color: darkgrey;*/
+         margin-top: 10px;
+     }
+     #canvas{
+         /*background-color: pink;*/
+     }
+        footer{
+            height: 30px;
+            background-color: silver;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<header class="col-sm-12">
+    <h3 class="col-sm-3">玩,玩个鸟啊</h3>
+    <button class="col-sm-2 col-sm-push-6 btn btn-default" id="singin" data-toggle="modal" data-target="#liginmodal">注册即送个鸟</button>
+    <button class="col-sm-1 col-sm-push-6 btn btn-info" id="login">登录</button>
+</header>
+<nav class="col-sm-12">
+    <div class="btn-group">
+        <div class="btn-group">
+            <button class="btn btn-default" data-toggle="dropdown">益智游戏
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">益智游戏</li>
+                <li>小鸟</li>
+                <li>老鸟</li>
+                <li class="divider"></li>
+                <li>无敌鸟</li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default" data-toggle="dropdown">射击游戏
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">射击游戏</li>
+                <li>打小鸟</li>
+                <li>打老鸟</li>
+                <li class="divider"></li>
+                <li>打无敌鸟</li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default" data-toggle="dropdown">RPG游戏
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">RPG游戏</li>
+                <li>扮小鸟</li>
+                <li>扮老鸟</li>
+                <li class="divider"></li>
+                <li>扮无敌鸟</li>
+            </ul>
+        </div>
+        </div>
+    <button class="btn btn-info" id="start">开始游戏</button>
+    <button class="btn btn-danger" id="stop">停止游戏</button>
+    <button class="btn btn-success" id="restart">重新开始</button>
+    <button class="btn btn-info navbar-right">个人中心</button>
+</nav>
+<section class="col-sm-8 col-lg-push-4" style="padding: 0">
+    <canvas id="canvas" width="500" height="800"></canvas>
+</section>
+<footer class="col-sm-12"></footer>
+<div class="modal" id="liginmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="btn btn-default close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title">欢迎注册</h3>
+            </div>
+            <div class="modal-body">
+                <p>请输入注册的用户名</p>
+                <input type="text" placeholder="请输入用户名" id="username"/>
+                <p>请输入注册的密码</p>
+                <input type="password" placeholder="随便输" id="pwd">
+                <p id="fansile">请再输入注册的密码</p>
+                <input type="password" placeholder="和上面必须一样" id="checkpwd">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" id="btnsure">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var uname = $("#username");
+    var pwd = $("#pwd");
+    var checkpwd = $("#checkpwd");
+    var btnsure = $("#btnsure");
+
+    var exspan = document.createElement("span");
+    var exmeter = document.createElement("meter");
+    exmeter.max = 10;
+    exmeter.optimum = 9;
+    exmeter.low = 3;
+    exmeter.high = 7;
+
+    checkpwd[0].oninput = function () {
+        if(pwd.val() != this.value && this.value.length != 0) {
+            exspan.innerHTML = "两次输入密码不一致";
+        }else if(this.value.length != 0){
+            exspan.innerHTML = "✅";
+        }
+
+        this.parentNode.appendChild(exspan);
+
+        if(this.value.length == 0){
+            this.parentNode.removeChild(exspan);
+        }
+    };
+
+    btnsure.click(function () {
+
+        if(uname.val().length != 0 && pwd.val().length != 0 && pwd.val() == checkpwd.val()) {
+            localStorage.setItem("username",uname.val());
+            localStorage.setItem("password",pwd.val());
+            $("#loginmodal").modal("hide");
+
+            alert("注册成功,恭喜你成为粽古的朋友");
+        }else {
+            alert("用户名或密码不能为空");
+        }
+    });
+
+    pwd[0].oninput = function () {
+        if(this.value.length < 6 ) {
+            exmeter.value = 3;
+        }else if(this.value.length >= 6 && this.value.length < 12 ) {
+            exmeter.value = 6;
+        }else {
+            exmeter.value = 10;
+        }
+
+        this.parentNode.insertBefore(exmeter,document.getElementById("fansile"));
+        if(this.value.length == 0){
+            this.parentNode.removeChild(exmeter);
+        }
+    }
+</script>
+<script>
+//    绘制canvas
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+var start = document.getElementById("start");
+var stop = document.getElementById("stop");
+var restart = document.getElementById("restart");
+    var cwidth = 500;
+    var cheight = 800;
+    var gravity = 10;
+    var uph = 100 +  Math.random()*200;
+    var downh = 410 - uph;
+    var i = -1;
+    var velocity = 10;//水管移动的速度
+    var tid;
+    var isScore = true;
+    var index = 0;
+    var ver1 = 10;
+    var ver2;
+    function Background(x,y,w,h,src){
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        var img = new Image();
+        img.src = src;
+        this.image = img;
+        this.draw = drawBackground;
+    }
+    function drawBackground(){
+        context.drawImage(this.image,this.x,this.y,this.w,this.h);
+    }
+function Bird(x,y,w,h,images){
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.images = images;
+    this.draw = drawBird;
+}
+function drawBird(){
+    index++;
+    if(index > 2){
+        index = 0
+    }
+    var img = new Image();
+    img.src = this.images[index];
+    context.drawImage(img,this.x,this.y,this.w,this.h);
+}
+    function UpPipe(x,y,w,h,src){
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        var img = new Image();
+        img.src = src;
+        this.image = img;
+        this.draw = drawUpPipe;
+    }
+    function drawUpPipe(){
+        context.drawImage(this.image,140,500,150,800,this.x,this.y,this.w,this.h)
+    }
+function DownPipe(x,y,w,h,src){
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    var img = new Image();
+    img.src = src;
+    this.image = img;
+    this.draw = drawDownPipe;
+}
+function drawDownPipe(){
+    context.drawImage(this.image,0,500,150,800,this.x,this.y,this.w,this.h)
+}
+//小鸟向下掉
+function cal() {
+//    ver2 = ver1+gravity;
+//    bird.y += (ver2+ver1)*0.5;
+//    bird.y += gravity;//如果你要加大难度 速率变快点
+//
+////      最好把水管速率做成一个独立的部分
+//    upPipe.x -= velocity  ;
+//    downPipe.x -= velocity;
+//    //console.log(uppipe.x);
+//    if(upPipe.x < 0) {
+//        i++;
+//        if(i % 8 == 0 && i > 0){
+//            velocity += 5;
+//            gravity += 1.5;
+//        }
+//        upPipe.x = cwidth ;
+//        downPipe.x = cwidth;
+//         upPipe.h =100 +  Math.random()*200;
+//        downPipe.h = 400 - upPipe.h;
+//        downPipe.y = 210 + upPipe.h;
+//    }
+    ver2 = ver1 + gravity;
+    bird.y += (ver1 + ver2) * 0.5;
+    if(upPipe.x + upPipe.w > 0) {
+        upPipe.x -= velocity;
+        downPipe.x -= velocity;
+    }else{
+        upPipe.x = cwidth;
+        downPipe.x = cwidth;
+        upPipe.h = 100 + Math.random()*200;
+        downPipe.y = 210 + upPipe.h;
+        downPipe.h = 400 - upPipe.h ;
+        isScore = true;
+    }
+    if(isScore && bird.x > upPipe.x + upPipe.w) {
+        i++;
+        if (i > 0 && i % 8 == 0) {
+            velocity += 5;
+            gravity += 2;
+        }
+        //这里需要写点东西
+        isScore = false;
+    }
+//        random 保证水管最低有100的高度 水管之间是200的距离
+    if(bird.y >= ground.y - 18){
+        //            游戏结束
+        clearInterval(tid);
+        context.fillStyle = "white";
+        context.font = "50px Accent";
+        context.fillText("你得了" + i + "分" ,200,100,100);
+    }
+    //碰到上水管死亡
+    if(((bird.x >= upPipe.x) &&
+            (bird.x <= upPipe.x + upPipe.w) &&
+            (bird.y > upPipe.y) && (bird.y <= upPipe.y + upPipe.h)) ||
+            ((bird.x >= upPipe.x)&&(bird.x <= upPipe.x + upPipe.w)&&
+            (bird.y >= upPipe.y) && (bird.y <= upPipe.y + upPipe.h))) {
+            clearInterval(tid);
+//            游戏结束
+        context.fillStyle = "white";
+        context.font = "50px Accent";
+        context.fillText("你得了" + i + "分" ,200,100,100);
+        }
+    //碰到下水管死亡
+    if(((bird.x  >= downPipe.x)&&
+            (bird.x  <= downPipe.x + downPipe.w)&&
+            (bird.y> downPipe.y) &&
+            (bird.y  <= downPipe.y + downPipe.h))||
+            ((bird.x >= downPipe.x) && (bird.x <= downPipe.x + downPipe.w) &&
+            (bird.y  >= downPipe.y) &&
+            (bird.y  <= downPipe.y + downPipe.h))) {
+        clearInterval(tid);
+//            游戏结束
+        context.fillStyle = "white";
+        context.font = "50px Accent";
+        context.fillText("你得了" + i + "分" ,200,100,100);
+    }
+}
+
+//  让鸟上升的部分
+document.onkeypress = function (e) {
+    var evt = e || window.event;
+    if(e.keyCode == 32) {
+        bird.y -= 60;
+    }
+};
+start.onclick = function () {
+    clearInterval(tid);
+    tid = setInterval(drawAll,100);
+};
+stop.onclick = function(){
+    clearInterval(tid);
+};
+restart.onclick = function () {
+    bird.y = 100;
+    upPipe.x = cwidth ;
+    downPipe.x = cwidth;
+    clearInterval(tid);
+    tid = setInterval(drawAll,100);
+};
+window.addEventListener('keypress',
+        function(ev){
+    if(ev.keyCode=='32')
+        ev.preventDefault();
+    },false);
+
+    var bg = new Background(0,0,cwidth,cheight-200,"images/bg.png");
+    var ground = new Background(0,cheight-200,cwidth,200,"images/ground.png");
+    var bird = new Bird(100,400,41,31,["images/0.gif","images/1.gif","images/2.gif"]);
+    var upPipe = new UpPipe(0,0,100,uph,"images/pipe.png");
+    var downPipe = new DownPipe(0,610 - downh,100, downh ,"images/pipe.png");
+    tid = setInterval(drawAll,100);
+    function drawAll(){
+        context.clearRect(0,0,cwidth,cheight);
+        bg.draw();
+        ground.draw();
+        bird.draw();
+        upPipe.draw();
+        downPipe.draw();
+        cal();
+    }
+
+
+</script>
+</body>
+</html>

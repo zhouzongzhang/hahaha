@@ -1,0 +1,661 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-style: normal;
+    text-decoration: none;
+
+}
+li{
+    /*float: left;*/
+    list-style: none;
+}
+a:hover{
+    color: #F10582;
+}
+/*头部样式设置开始*/
+
+/*小三角样式设置*/
+i{
+    width: 12px;
+    height: 6px;
+    position: absolute;
+    top: 13px;
+    overflow: hidden;
+}
+a{
+    color: #666;
+}
+s{
+    width: 12px;
+    height: 12px;
+    line-height: 28px;
+    position: absolute;
+    top: -14px;
+    color: #999999;
+}
+
+/*版心样式设置*/
+.center{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*头部导航条样式设置开始*/
+.head-top{
+    /*width: 88px;*/
+    height: 28px;
+    background-color: #F5F5F5;
+    line-height: 28px;
+}
+.address{
+    float: left;
+    position: relative;
+    height: 28px;
+    margin-left: 16px;
+    z-index: 10;
+}
+.address-main{
+    position: relative;
+    float: left;
+    z-index: 10;
+}
+.address-main > i{
+    left: 42px;
+}
+.address-after{
+    position: absolute;
+    width: 86px;
+    left: -16px;
+    height: 28px;
+    border: 1px solid #CDCDCD;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+    visibility: hidden;
+
+}
+.adddropdown{
+    position: absolute;
+    top: 27px;
+    left: -16px;
+    width: 296px;
+    height: 460px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    visibility: hidden;
+}
+.adddropdown h1{
+    margin: 0 20px;
+    border-bottom: 1px dashed #000000;
+}
+.adddropdown p span{
+    padding: 0 14px 0 20px;
+}
+.adddropdown  a{
+    margin: 0 2px;
+    padding:4px;
+}
+.dropdown-hover .address-after, .dropdown-hover .adddropdown{
+    visibility: visible;
+}
+.top-nav{
+    list-style: none;
+    float: right;
+}
+.top-nav > li > i{
+    margin-left: 2px;
+}
+.top-nav > li{
+    float: left;
+    padding-left: 15px;
+}
+.top-nav  span{
+    margin-left: 15px;
+    color: #D4D4D4;
+}
+
+
+.top-nav > li > a{
+    position: relative;
+    float: left;
+    z-index: 10;
+}
+.login,.collect, .club, .service, .phone, .more{
+    position: relative;
+    float: left;
+    z-index: 10;
+}
+/*登录下拉样式设置开始*/
+
+.login-after{
+    width: 70px;
+    height: 28px;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    border-top: 0;
+    border-bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+
+}
+.logdropdown{
+    height: 176px;
+    width: 280px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    position: absolute;
+    top: 27px;
+    left:0;
+    visibility: hidden;
+}
+.dropdown-hover .login-after, .dropdown-hover .logdropdown{
+    visibility: visible;
+}
+
+.login-img{
+    width: 38px;
+    height: 38px;
+    background: url("../images/spring.png")no-repeat 0 -185px;
+    position: absolute;
+    top: 28px;
+    left: 20px;
+}
+.logdropdown > p{
+    display: block;
+    height: 30px;
+    width: 180px;
+    border-bottom: 1px dashed #D6D6D6;
+    margin:30px 0 0 68px;
+}
+.login-left{
+    float: left;
+    margin: 18px 0 0 26px;
+}
+.login-right{
+    float: right;
+    margin: 18px 72px 0 0;
+}
+/*登录下拉样式设置结束*/
+
+/*收藏下拉样式设置开始*/
+.top-nav .collect a{
+    padding-right: 12px;
+}
+.collect-after{
+    width: 100px;
+    height: 28px;
+    position: absolute;
+    top:0;
+    left: -6px;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    border-top: 0;
+    border-bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+.coldropdown{
+    width: 130px;
+    height: 78px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    position: absolute;
+    top: 27px;
+    left: -6px;
+    visibility: hidden;
+}
+.dropdown-hover .collect-after, .dropdown-hover .coldropdown{
+    visibility: visible;
+}
+.collect-list{
+    margin: 4px 0 0 20px;
+}
+.collect-list li{
+    margin-bottom: 3px;
+}
+/*收藏下拉样式设置结束*/
+
+/*club下拉样式设置开始*/
+.top-nav .club > a{
+    padding-right: 12px;
+}
+.club-after{
+    width: 112px;
+    height: 28px;
+    position: absolute;
+    top:0;
+    left: -6px;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    border-top: 0;
+    border-bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+.cludropdown{
+    height: 108px;
+    width: 112px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    position: absolute;
+    top: 27px;
+    left: -6px;
+    visibility: hidden;
+}
+.dropdown-hover .club-after, .dropdown-hover .cludropdown{
+    visibility: visible;
+}
+.club-list{
+    margin: 4px 0 0 20px;
+}
+.club-list li{
+    margin-bottom: 3px;
+}
+/*club下拉样式设置结束*/
+
+/*服务下拉样式设置开始*/
+.top-nav .service > a{
+    padding-right: 22px;
+}
+.service-after{
+    width: 110px;
+    height: 28px;
+    position: absolute;
+    top:0;
+    left: -6px;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    border-top: 0;
+    border-bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+.serdropdown{
+    width: 110px;
+    height: 138px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    position: absolute;
+    top: 27px;
+    left: -6px;
+    visibility: hidden;
+}
+.dropdown-hover .service-after, .dropdown-hover .serdropdown{
+    visibility: visible;
+}
+.service-list{
+    margin: 4px 0 0 20px;
+}
+.service-list li{
+    margin-bottom: 3px;
+}
+/*club下
+/*服务下拉样式设置结束*/
+
+/*手机端下拉样式设置开始*/
+.top-nav .phone > a{
+    padding-left: 14px;
+}
+.top-nav .mob{
+    width: 10px;
+    height: 14px;
+    top: 7px;
+    position: absolute;
+    background: url("../images/spring.png")no-repeat -100px -150px;
+    z-index: 10;
+}
+.phone-after{
+    width: 90px;
+    height: 28px;
+    position: absolute;
+    top:0;
+    left: -6px;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    border-top: 0;
+    border-bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+.phodropdown{
+    width: 186px;
+    height: 214px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    position: absolute;
+    top: 27px;
+    left: -102px;
+    visibility: hidden;
+}
+.dropdown-hover .phone-after, .dropdown-hover .phodropdown{
+    visibility: visible;
+}
+.erweima{
+    width: 161px;
+    height: 161px;
+    padding: 12px;
+}
+
+.phodropdown  a{
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+    margin: 0 0 20px 48px;
+    position: absolute;
+    bottom: -14px;
+
+}
+.phodropdown  a:hover{
+    color: #F10582;
+}
+/*手机端下拉样式设置结束*/
+
+/*更多下拉样式设置开始*/
+.top-nav .more > a{
+    margin-right: 33px;
+}
+.more-after{
+    width: 76px;
+    height: 28px;
+    position: absolute;
+    top:0;
+    left: -6px;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    border-top: 0;
+    border-bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+
+}
+.mordropdown{
+    width: 300px;
+    height: 164px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    position: absolute;
+    top: 27px;
+    left: -230px;
+    visibility: hidden;
+}
+.dropdown-hover .more-after, .dropdown-hover .mordropdown{
+    visibility: visible;
+}
+.mordropdown  h1{
+    color: #333333;
+    margin: 12px 0 0 20px;
+}
+
+.more-top{
+    width: 260px;
+    height: 40px;
+    border-bottom: 1px dashed #D5D5D5;
+}
+.mordropdown ul{
+    margin: 0 0 0 20px;
+}
+.mordropdown li{
+    padding-right: 14px;
+    float: left;
+}
+
+/*更多下拉样式设置结束*/
+
+
+/*头部导航条样式设置结束*/
+
+/*头部logo样式设置开始*/
+.head-logo{
+    height: 100px;
+    /*background-color: pink;*/
+}
+.logo{
+    width: 266px;
+    height: 78px;
+    float: left;
+}
+.logo h1{
+    position: absolute;
+    text-indent: -999em;
+}
+.pic{
+    width: 382px;
+    height: 100px;
+    float: left;
+    margin-left: 192px;
+}
+.car{
+    float: right;
+    line-height: 100px;
+    padding-right: 21px;
+    position: relative;
+    z-index: 9;
+}
+.car > a{
+    padding-left: 46px;
+    position: relative;
+    border-left: 1px solid #D4D4D4;
+    z-index: 9;
+}
+.car-ico{
+    width: 14px;
+    height: 21px;
+    background: url("../images/spring.png")no-repeat 0 -59px;
+    position: absolute;
+    top: 37px;
+    left: 23px;
+    z-index: 9;
+    cursor: pointer;
+}
+.car-num{
+    width: 16px;
+    height: 16px;
+    color: #FFFFFF;
+    background-color: #F10180;
+    border-radius: 7px;
+    position: absolute;
+    top: 34px;
+    left: 31px;
+    cursor: pointer;
+    z-index: 9;
+}
+.car-num span{
+    color: #FFFFFF;
+    position: absolute;
+    top: -42px;
+    left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.car-after{
+    width: 126px;
+    height: 54px;
+    position: absolute;
+    top:20px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    border-bottom: 0;
+    z-index: 1;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+.cardropdown{
+    width: 348px;
+    height: 80px;
+    line-height: 80px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    position: absolute;
+    top: 74px;
+    left: -222px;
+    visibility: hidden;
+}
+.dropdown-hover .car-after, .dropdown-hover .cardropdown{
+    visibility: visible;
+}
+.cardropdown p{
+    margin-left: 62px;
+    color: #333333;
+}
+.cardropdown p a{
+    color: #F10582;
+}
+
+/*头部logo样式设置结束*/
+
+/*头部主导航样式设置开始*/
+.head-nav{
+    width: 100%;
+    height: 40px;
+    background-color: #F10180;
+}
+.head-nav li{
+    float: left;
+    padding: 0 14px;
+    cursor: pointer;
+}
+.head-nav li:hover{
+    background-color: #DB0A76 !important;
+}
+.head-nav li a{
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.nav-more a{
+    padding-right: 14px;
+    z-index: 2;
+}
+.nav-more i{
+    top: 20px;
+    right: 340px;
+}
+.nav-more i s{
+    z-index: 2;
+    color: #FFFFFF;
+}
+.nav-mordropdown{
+    width: 594px;
+    height: 260px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 40px;
+    left: 78px;
+    z-index: 10;
+    visibility: hidden;
+    cursor: pointer;
+    /*visibility: visible;*/
+}
+.navmore-main{
+    width: 542px;
+    height: 208px;
+    margin: 26px;
+    overflow: hidden;
+}
+.navmore-main li{
+    width: 170px;
+    height: 96px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+.navmore-top{
+    height: 96px;
+    margin-bottom: 16px;
+}
+.navmore-main p{
+    width: 170px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+}
+.navmore-main div{
+    width: 170px;
+    height: 96px;
+    background-color: #000000;
+    margin-top: -53px;
+}
+.notice a{
+    padding-left: 28px;
+}
+.notice .notic-ico{
+    width: 20px;
+    height: 32px;
+    position: absolute;
+    top: 4px;
+    background: url("../images/notice.png")no-repeat;
+}
+.classify{
+    float: right !important;
+}
+.classify a{
+    padding: 0 18px 0 46px;
+}
+.classify .classify-ico{
+    width: 20px;
+    height: 32px;
+    background: url("../images/classify.png")no-repeat;
+    position: absolute;
+    top: 4px;
+    right: 68px;
+}
+/*头部主导航样式设置结束*/
+
+/*头部样式设置结束*/
+/*广告轮播图样式设置开始*/
+.banner{
+    width:100%;
+    height: 470px;
+    padding-top: 30px;
+    background: url("../images/background.jpg") no-repeat top center;
+}
+.banner .lunbo{
+    width: 1000px;
+    height: 470px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+.banner .lunbo .img{
+    width:600%;
+    position: absolute;
+}
+.banner .lunbo .img li{
+    float: left;
+}
+.banner .lunbo .circle{
+    list-style: none;
+    width: 240px;
+    height: 15px;
+    position: absolute;
+    bottom:120px;
+    left: 50%;
+    margin-left: -120px;
+}
+.banner .lunbo .circle li{
+    width: 15px;
+    height: 15px;
+    background-color: #666;
+    border-radius: 50%;
+    margin: 0 15px;
+    text-align: center;
+    float: left;
+}
+/*广告轮播图样式设置结束*/

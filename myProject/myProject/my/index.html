@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        /*reset*/
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            outline: none;
+            font:12px/180% Arial, Helvetica, sans-serif, "新宋体";
+        }
+        .container{
+            width: 1100px;
+            margin: auto;
+        }
+        header{
+            width: 100%;
+        }
+        .head-top{
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            /*background-color: pink;*/
+        }
+        .head-top-nav{
+            height: 100px;
+            /*background-color: red;*/
+        }
+        .head-logo{
+            /*background-color: greenyellow;*/
+        }
+       .head-top-myLogo{
+           height: 110px;
+           /*background-color: lightskyblue;*/
+           text-align: center;
+       }
+        .head-top-slider{
+            /*width: 1000px;*/
+            height: 480px;
+            margin:auto;
+        }
+        .head-top-sliderList li{
+            margin: 0 auto;
+            float: left;
+            /*float: right;*/
+            width: 100px;
+            height: 480px;
+        }
+        .head-top-sliderList li:nth-child(1){
+            background: url("images/1.jpg");
+        }
+        .head-top-sliderList li:nth-child(2){
+            background: url("images/2.jpg");
+        }
+        .head-top-sliderList li:nth-child(3){
+            background: url("images/3.jpg");
+        }
+        .head-top-sliderList li:nth-child(4){
+            width: 800px;
+            background: url("images/4.jpg");
+        }
+        .sliderList-txt{
+            width: 100px;
+            height: 480px;
+            background: #000;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .slider-txt-p{
+            color: #fff;
+            float: left;
+            position: relative;
+            font-size: 16px;
+            width: 16px;
+            margin:25px 0 0 42px;
+            font-family:"microsoft yahei";
+
+        }
+
+        footer{
+            height: 50px;
+            background-color: pink;
+            position: fixed;
+        }
+        .myInfoSidebar{
+            width: 200px;
+            height: 110px;
+            position: absolute;
+            left: -200px;
+            background-color: #46a3ff;
+        }
+        .myInfo-headPic{
+            width: 110px;
+            height: 110px;
+            background-color: #fff;
+            position: absolute;
+            /*left: -110px;*/
+            /*float: right;*/
+            /*position: absolute;*/
+            /*top: 100px;*/
+            /*left: 50px;*/
+        }
+        .myInfo-btn{
+            border: 0;
+            border-radius:50%;
+            font-size: 14px;
+            width: 100px;
+            height: 100px;
+            /*position: relative;*/
+            /*top: 355px;*/
+            /*float: left;*/
+            cursor: pointer;
+            background: url("images/headPic.jpg");
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <div class="head-top">
+        <div class="container">
+            <nav class="head-top-nav"></nav>
+        </div>
+    </div>
+    <div class="head-logo">
+        <div class="container">
+            <div class="myInfoSidebar">
+                <div class="myInfo-top"></div>
+                <div class="myInfo-main">
+                    <ul class="myInfoList">
+                        <li><a href="">个人信息</a></li>
+                        <li><a href="">求职信息</a></li>
+                        <li><a href="">联系方式</a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="myInfo-headPic">
+                <button id="myInfo-btn" class="myInfo-btn"></button>
+            </div>
+            <div class="head-top-myLogo"><a href=""><img src="images/mylogo.png" alt=""/></a></div>
+        </div>
+    </div>
+    <div class="head-nav">
+        <div class="container">
+            <div class="head-top-slider">
+                <ul class="head-top-sliderList">
+                    <li>
+                        <div class="sliderList-txt">
+                            <p class="slider-txt-p">欢迎来到我的主页</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sliderList-txt">
+                            <p class="slider-txt-p">欢迎来到我的主页</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sliderList-txt">
+                            <p class="slider-txt-p">欢迎来到我的主页</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sliderList-txt">
+                            <p class="slider-txt-p">欢迎来到我的主页</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="content"></div>
+
+<footer></footer>
+
+
+<script>
+    $('.head-top-sliderList li').hover(function(){
+        $(this).stop(true).animate({width:"800px"},500).siblings().stop(true).animate({width:"100px"},500);
+
+    })
+var flag = true;
+$('#myInfo-btn').click(function (){
+    if(flag){
+//        $(this).animate({left: '200px'},500);
+        $('.myInfoSidebar').animate({left: 0},500);
+    }else {
+        $('.myInfoSidebar').animate({left: '-200px'},500);
+//        $(this).animate({left: 0},500);
+    }
+    flag = ! flag;
+})
+
+</script>
+</body>
+</html>
